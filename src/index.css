@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* CineTrack Theme */
+
+body {
+  @apply bg-[#0b0f1a] text-white;
+}
+
+.ct-card {
+  @apply bg-[#111827] border border-gray-800 rounded-2xl shadow-xl;
+}
+
+.ct-input {
+  @apply w-full px-4 py-3 bg-[#0b0f1a] border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
+
+.ct-button {
+  @apply w-full py-3 rounded-lg font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 transition;
+}
