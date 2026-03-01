@@ -7,5 +7,8 @@ export const authService = {
   register: (name, email, password) =>
     api.post("/api/auth/register", { name, email, password }),
 
+  registerFromInvite: (token, name, password) =>
+    api.post("/api/auth/register-from-invite", { token, name, password }),
+
   getProfile: () => api.get("/api/users/profile"),
 };
