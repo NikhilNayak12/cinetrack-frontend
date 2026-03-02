@@ -11,6 +11,8 @@ import JudgePanel from "./pages/JudgePanel";
 import JudgeTaskList from "./pages/JudgeTaskList";
 import JudgeTaskDetail from "./pages/JudgeTaskDetail";
 import Profile from "./pages/Profile";
+import InviteJudge from "./pages/InviteJudge";
+import AcceptInvite from "./pages/AcceptInvite";
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/invite/:token" element={<AcceptInvite />} />
 
         <Route
           path="/dashboard"
@@ -59,6 +62,14 @@ function App() {
           element={
             <ProtectedRoute>
               <FilmDetails />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/invite-judge"
+          element={
+            <ProtectedRoute>
+              <InviteJudge />
             </ProtectedRoute>
           }
         />

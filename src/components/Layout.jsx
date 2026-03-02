@@ -46,6 +46,14 @@ export default function Layout({ children }) {
                   My Submissions
                 </Link>
               )}
+              {user?.role === ROLES.ADMIN && (
+                <Link
+                  to="/invite-judge"
+                  className="text-gray-400 hover:text-white transition"
+                >
+                  Invite Judge
+                </Link>
+              )}
               {(user?.role === ROLES.ADMIN || user?.role === ROLES.JUDGE) && (
                 <Link
                   to="/judge"
