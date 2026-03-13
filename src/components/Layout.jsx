@@ -30,7 +30,7 @@ export default function Layout({ children }) {
               >
                 Dashboard
               </Link>
-              {(user?.role === ROLES.STUDENT || user?.role === ROLES.ADMIN) && (
+              {user?.role === ROLES.STUDENT && (
                 <Link
                   to="/films/upload"
                   className="text-gray-400 hover:text-white transition"
